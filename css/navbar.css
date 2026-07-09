@@ -1,0 +1,43 @@
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+.navbar{
+
+    padding: 15px 0;
+
+}
+
+.navbar-brand{
+
+    letter-spacing: 1px;
+
+}
+
+.nav-link{
+
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:#0d6efd;
+
+}
+
+.icono{
+
+    color:#333;
+    font-size:22px;
+    transition:.3s;
+
+}
+
+.icono:hover{
+
+    color:#0d6efd;
+
+}
