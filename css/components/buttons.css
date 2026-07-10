@@ -1,0 +1,67 @@
+/*======================================
+            BOTONES
+=======================================*/
+
+.btn-primary-custom{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+}
+
+.btn-primary-custom:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-md);
+
+    color:var(--white);
+
+}
+
+.btn-secondary-custom{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    border:2px solid white;
+
+    color:white;
+
+    background:transparent;
+
+    transition:var(--transition);
+
+}
+
+.btn-secondary-custom:hover{
+
+    background:white;
+
+    color:var(--dark);
+
+}

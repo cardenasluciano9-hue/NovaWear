@@ -1,0 +1,45 @@
+/*======================================
+    VARIABLES GLOBALES
+=======================================*/
+
+:root{
+
+    /* Colores */
+
+    --primary:#2563EB;
+    --primary-hover:#1D4ED8;
+
+    --dark:#111827;
+    --gray:#6B7280;
+    --light:#F9FAFB;
+
+    --white:#FFFFFF;
+
+    --success:#10B981;
+    --warning:#F59E0B;
+    --danger:#EF4444;
+
+    /* Sombras */
+
+    --shadow-sm:0 2px 8px rgba(0,0,0,.08);
+
+    --shadow-md:0 6px 20px rgba(0,0,0,.12);
+
+    --shadow-lg:0 12px 40px rgba(0,0,0,.18);
+
+    /* Bordes */
+
+    --radius:14px;
+
+    /* Transiciones */
+
+    --transition:.3s ease;
+
+    /* Navbar */
+
+    --navbar-height: 80px;
+    --navbar-bg: rgba(255,255,255,.92);
+    --navbar-border: rgba(0,0,0,.06);
+
+}
+

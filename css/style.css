@@ -1,12 +1,89 @@
-/* RESET */
+/*======================================
+        ESTRUCTURA GENERAL
+=======================================*/
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+section{
+
+    padding:100px 0;
+
 }
 
-body{
-    background: #f8f9fa;
-    font-family: Arial, Helvetica, sans-serif;
+/* Hero */
+
+#hero{
+
+    min-height:100vh;
+
+    background:#111827;
+
+}
+
+/* Categorías */
+
+#categories{
+
+    min-height:700px;
+
+    background:#F8F9FA;
+
+}
+
+/* Productos */
+
+#featured-products{
+
+    min-height:900px;
+
+    background:#FFFFFF;
+
+}
+
+/* Banner */
+
+#banner{
+
+    min-height:400px;
+
+    background:#2563EB;
+
+}
+
+/* Nuevos */
+
+#new-products{
+
+    min-height:900px;
+
+    background:#F8F9FA;
+
+}
+
+/* Testimonios */
+
+#testimonials{
+
+    min-height:600px;
+
+    background:#FFFFFF;
+
+}
+
+/* Newsletter */
+
+#newsletter{
+
+    min-height:350px;
+
+    background:#111827;
+
+}
+
+/* Footer */
+
+footer{
+
+    min-height:350px;
+
+    background:#000;
+
 }

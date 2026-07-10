@@ -1,0 +1,153 @@
+/*======================================
+            HERO
+=======================================*/
+
+#hero{
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("../img/banners/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+}
+
+.hero-overlay{
+
+    width:100%;
+}
+
+.hero-content{
+
+    color:white;
+
+    max-width:700px;
+
+    animation:fadeUp 1s ease;
+
+}
+
+.hero-badge{
+
+    display:inline-block;
+
+    background:rgba(255,255,255,.15);
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    margin-bottom:20px;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.hero-content h1{
+
+    font-size:4rem;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+    font-size:1.25rem;
+
+    color:#E5E7EB;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-bottom:40px;
+
+}
+
+.hero-buttons .btn{
+
+    border-radius:40px;
+
+    padding:12px 28px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.hero-buttons .btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.20);
+
+}
+
+.hero-info{
+
+    display:flex;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    color:#F3F4F6;
+
+}
+
+.hero-info div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:rgba(255,255,255,.12);
+
+    padding:12px 18px;
+
+    border-radius:40px;
+
+    backdrop-filter:blur(8px);
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
