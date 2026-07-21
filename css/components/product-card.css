@@ -2,7 +2,7 @@
         PRODUCT CARD
 =======================================*/
 
-.product-card{
+/*.product-card{
 
     max-width: 320px;
 
@@ -18,7 +18,7 @@
 
     transition: var(--transition);
 
-}
+}*/
 
 .product-card:hover{
 
@@ -32,7 +32,17 @@
 
     position: relative;
 
+    height: 260px;
+
     overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #fff;
 
 }
 
@@ -46,7 +56,7 @@
 
     transition: .4s;
 
-}*/
+}
 
 .product-image img{
 
@@ -55,6 +65,20 @@
     height: 260px;
 
     object-fit: cover;
+
+    transition: .4s;
+
+}*/
+
+.product-image img{
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
 
     transition: .4s;
 
@@ -98,10 +122,19 @@
 
 }
 
-.product-info{
+/*.product-info{
 
     padding: 15px;
 
+}*/
+
+.product-info{
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
 }
 
 .product-category{
@@ -144,4 +177,21 @@
 
     font-weight: 500;
 
+}
+
+.product-card{
+    max-width: 320px;
+    margin: auto;
+    background: var(--white);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-primary-custom{
+    margin-top: auto;
 }
