@@ -1,0 +1,286 @@
+/*======================================
+        PROMO BANNER
+=======================================*/
+
+.promo-banner{
+
+    margin: 80px 0;
+
+}
+
+.promo-content{
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    padding: 90px 60px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("../../img/banners/banner-promo.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+    transition:
+        transform .5s ease,
+        box-shadow .5s ease;
+
+    animation: bannerZoom 12s ease-in-out infinite alternate;
+
+}
+
+.promo-content:hover{
+
+    transform: scale(1.02);
+
+    box-shadow: 0 25px 50px rgba(0,0,0,.35);
+
+}
+
+/*======================================
+        BRILLO
+=======================================*/
+
+.promo-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    width:45%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.18),
+        transparent
+    );
+
+    transform:translateX(-170%) skewX(-25deg);
+
+    transition:transform .9s ease;
+
+    pointer-events:none;
+
+}
+
+.promo-content:hover::before{
+
+    transform:translateX(700%) skewX(-25deg);
+
+}
+
+/*======================================
+        TEXTO
+=======================================*/
+
+.promo-tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:rgba(255,255,255,.15);
+
+    border-radius:50px;
+
+    backdrop-filter:blur(8px);
+
+    margin-bottom:20px;
+
+    font-weight:600;
+
+}
+
+.promo-content h2{
+
+    font-size:clamp(2.5rem,5vw,4rem);
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+}
+
+.promo-content p{
+
+    max-width:600px;
+
+    font-size:1.1rem;
+
+    margin-bottom:35px;
+
+}
+
+/*======================================
+        BOTONES
+=======================================*/
+
+.promo-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn-primary-custom{
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.btn-primary-custom:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.btn-outline-light-custom{
+
+    padding:14px 30px;
+
+    border:2px solid white;
+
+    border-radius:50px;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:
+        all .3s ease;
+
+}
+
+.btn-outline-light-custom:hover{
+
+    background:white;
+
+    color:black;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 8px 18px rgba(255,255,255,.20);
+
+}
+
+/*======================================
+        ANIMACIÓN DE ENTRADA
+=======================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+.promo-tag,
+.promo-content h2,
+.promo-content p,
+.promo-buttons{
+
+    opacity:0;
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+.promo-tag{
+
+    animation-delay:.1s;
+
+}
+
+.promo-content h2{
+
+    animation-delay:.3s;
+
+}
+
+.promo-content p{
+
+    animation-delay:.5s;
+
+}
+
+.promo-buttons{
+
+    animation-delay:.7s;
+
+}
+
+/*======================================
+        ZOOM DEL FONDO
+=======================================*/
+
+@keyframes bannerZoom{
+
+    from{
+
+        background-size:100%;
+
+    }
+
+    to{
+
+        background-size:108%;
+
+    }
+
+}
+
+/*======================================
+        RESPONSIVE
+=======================================*/
+
+@media (max-width:768px){
+
+    .promo-content{
+
+        padding:60px 25px;
+
+        text-align:center;
+
+    }
+
+    .promo-buttons{
+
+        justify-content:center;
+
+    }
+
+    .promo-content p{
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+}
