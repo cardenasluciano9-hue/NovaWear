@@ -1,0 +1,216 @@
+/*======================================
+        TESTIMONIAL CARD
+=======================================*/
+
+.testimonial-card{
+
+    position: relative;
+
+    height: 100%;
+
+    padding: 35px 30px;
+
+    background: var(--white);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.testimonial-card:hover{
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+/*======================================
+        QUOTE
+=======================================*/
+
+.testimonial-quote{
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 25px;
+
+    font-size: 5rem;
+
+    color: rgba(0,0,0,.05);
+
+    pointer-events: none;
+
+    user-select: none;
+
+}
+
+/*======================================
+        STARS
+=======================================*/
+
+.testimonial-stars{
+
+    display: flex;
+
+    gap: 5px;
+
+    margin-bottom: 20px;
+
+    color: #fbbf24;
+
+    font-size: 1rem;
+
+}
+
+/*======================================
+        COMMENT
+=======================================*/
+
+.testimonial-comment{
+
+    color: var(--gray);
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+
+    font-style: italic;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/*======================================
+        USER
+=======================================*/
+
+.testimonial-user{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+.testimonial-avatar{
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 3px solid var(--primary);
+
+}
+
+.testimonial-user h5{
+
+    margin: 0;
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+
+}
+
+.testimonial-user span{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: var(--gray);
+
+    font-size: .9rem;
+
+}
+
+.testimonial-user span i{
+
+    color: var(--primary);
+
+}
+
+/*======================================
+        SHINE EFFECT
+=======================================*/
+
+.testimonial-card::before{
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.20),
+        transparent
+    );
+
+    transform: translateX(-180%) skewX(-25deg);
+
+    transition: transform .9s ease;
+
+    pointer-events: none;
+
+}
+
+.testimonial-card:hover::before{
+
+    transform: translateX(350%) skewX(-25deg);
+
+}
+
+/*======================================
+        RESPONSIVE
+=======================================*/
+
+@media (max-width:768px){
+
+    .testimonial-card{
+
+        padding: 25px;
+
+    }
+
+    .testimonial-avatar{
+
+        width: 60px;
+
+        height: 60px;
+
+    }
+
+}
+
+/*======================================
+        TESTIMONIALS SECTION
+=======================================*/
+
+.testimonials{
+
+    background: #f8fafc;
+
+}

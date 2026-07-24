@@ -1,0 +1,41 @@
+/*======================================
+        LAYOUT GENERAL
+=======================================*/
+
+/* Espaciado uniforme entre secciones */
+
+.section{
+
+    padding: 70px 0;
+
+}
+
+/* Títulos de sección */
+
+.section-title{
+
+    margin-bottom: 50px;
+
+}
+
+.section-title h2{
+
+    font-size: clamp(2rem,4vw,3rem);
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+}
+
+.section-title p{
+
+    color: var(--gray);
+
+    max-width: 650px;
+
+    margin: auto;
+
+    font-size: 1.05rem;
+
+}

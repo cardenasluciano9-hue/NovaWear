@@ -40,6 +40,12 @@
 
     <link rel="stylesheet" href="css/components/arrival-card.css">
 
+    <link rel="stylesheet" href="css/components/testimonial-card.css">
+
+    <link rel="stylesheet" href="css/sections/newsletter.css">
+
+    <link rel="stylesheet" href="css/base/layout.css">
+
 </head>
 <body>
 
@@ -183,8 +189,7 @@
 
 <!-- ================= CATEGORÍAS ================= -->
 
-<section id="categories">
-    <section id="categories" class="py-5">
+    <section id="categories" class="section">
 
     <div class="container">
 
@@ -205,11 +210,10 @@
     </div>
 
 </section>
-</section>
 
 <!-- ================= PRODUCTOS DESTACADOS ================= -->
 
-<section id="featured-products">
+<section id="featured-products" class="section">
 
     <div class="container">
 
@@ -282,7 +286,7 @@
         NUEVOS INGRESOS
     =======================================-->
 
-    <section class="py-5">
+    <section class="section">
 
         <div class="container">
 
@@ -319,20 +323,269 @@
 
 <!-- ================= TESTIMONIOS ================= -->
 
-<section id="testimonials">
+<section id="testimonials" class="section">
+
+    <!--======================================
+        TESTIMONIOS
+=======================================-->
+
+<section class="testimonials py-5">
+
+    <div class="container">
+
+        <div class="section-title text-center mb-5">
+
+            <span class="section-subtitle">
+
+                Ellos ya confiaron en nosotros
+
+            </span>
+
+            <h2>
+
+                Lo que dicen nuestros clientes
+
+            </h2>
+
+            <p>
+
+                La satisfacción de nuestros clientes es nuestra mejor carta de presentación.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4" id="testimonialsContainer">
+
+        </div>
+
+    </div>
+
+</section>
 
 </section>
 
 <!-- ================= NEWSLETTER ================= -->
 
-<section id="newsletter">
+<section id="newsletter" class="section">
+<!--======================================
+        NEWSLETTER
+=======================================-->
 
+<section class="newsletter">
+
+    <div class="container">
+
+        <div class="newsletter-content">
+
+            <div class="newsletter-icon">
+
+                <i class="bi bi-envelope-paper-heart"></i>
+
+            </div>
+
+            <h2>
+
+                Unite a la comunidad NovaWear
+
+            </h2>
+
+            <p>
+
+                Recibí antes que nadie nuestras nuevas colecciones,
+                promociones exclusivas y descuentos especiales.
+
+            </p>
+
+            <form class="newsletter-form">
+
+                <input
+                    type="email"
+                    placeholder="Ingresá tu correo electrónico"
+                    required
+                >
+
+                <button class="btn-primary-custom">
+
+                    <i class="bi bi-send-fill"></i>
+
+                        Suscribirme
+
+                </button>
+
+
+
+            </form>
+
+            <div class="newsletter-benefits">
+
+                <span>
+
+                    <i class="bi bi-check-circle-fill"></i>
+
+                    Sin spam
+
+                </span>
+
+                <span>
+
+                    <i class="bi bi-check-circle-fill"></i>
+
+                    Promociones exclusivas
+
+                </span>
+
+                <span>
+
+                    <i class="bi bi-check-circle-fill"></i>
+
+                    Cancelá cuando quieras
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 </section>
 
 <!-- ================= FOOTER ================= -->
 
-<footer>
+<footer class="section">
+<!--======================================
+                FOOTER
+=======================================-->
 
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row gy-5">
+
+            <!-- Logo -->
+
+            <div class="col-lg-4">
+
+                <h3 class="footer-logo">
+
+                    <i class="bi bi-bag-heart-fill"></i>
+
+                    NovaWear
+
+                </h3>
+
+                <p class="footer-description">
+
+                    Moda urbana con estilo, calidad y comodidad
+                    para todos. Descubrí las últimas tendencias
+                    y vestí tu mejor versión.
+
+                </p>
+
+            </div>
+
+            <!-- Navegación -->
+
+            <div class="col-lg-2 col-md-4">
+
+                <h5>Explorar</h5>
+
+                <ul>
+
+                    <li><a href="#">Inicio</a></li>
+
+                    <li><a href="#">Hombre</a></li>
+
+                    <li><a href="#">Mujer</a></li>
+
+                    <li><a href="#">Niños</a></li>
+
+                    <li><a href="#">Ofertas</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Ayuda -->
+
+            <div class="col-lg-2 col-md-4">
+
+                <h5>Ayuda</h5>
+
+                <ul>
+
+                    <li><a href="#">Preguntas frecuentes</a></li>
+
+                    <li><a href="#">Envíos</a></li>
+
+                    <li><a href="#">Cambios</a></li>
+
+                    <li><a href="#">Contacto</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contacto -->
+
+            <div class="col-lg-4 col-md-4">
+
+                <h5>Contacto</h5>
+
+                <p>
+
+                    <i class="bi bi-envelope-fill"></i>
+
+                    contacto@novawear.com
+
+                </p>
+
+                <p>
+
+                    <i class="bi bi-telephone-fill"></i>
+
+                    +54 11 1234-5678
+
+                </p>
+
+                <p>
+
+                    <i class="bi bi-geo-alt-fill"></i>
+
+                    Buenos Aires, Argentina
+
+                </p>
+
+                <div class="footer-social">
+
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+
+                    <a href="#"><i class="bi bi-tiktok"></i></a>
+
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-bottom">
+
+            © 2026 NovaWear - Todos los derechos reservados.
+
+        </div>
+
+    </div>
+
+</footer>
 </footer>
 
 

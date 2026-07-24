@@ -67,3 +67,12 @@
     color:var(--dark);
 
 }
+
+.btn-primary-custom{
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+}
