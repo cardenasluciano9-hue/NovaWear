@@ -56,7 +56,9 @@ export function createProductCard(product) {
                     </div>
 
 
-                    <button class="btn-primary-custom w-100">
+                    <button
+                        class="btn-primary-custom w-100 add-to-cart"
+                        data-id="${product.id}">
 
                         <i class="bi bi-cart-plus"></i>
 

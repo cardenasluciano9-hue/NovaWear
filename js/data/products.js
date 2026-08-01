@@ -8,7 +8,10 @@ export const products = [
         image: "img/productos/remeras/remera1.jpg",
         rating: 5,
         reviews: 128,
-        shipping: true
+        shipping: true,
+
+        featured: true,
+        arrival: false
     },
 
     {
@@ -19,7 +22,10 @@ export const products = [
         image: "img/productos/buzos/buzo1.jpg",
         rating: 4,
         reviews: 95,
-        shipping: true
+        shipping: true,
+
+        featured: true,
+        arrival: false
     },
 
     {
@@ -27,11 +33,13 @@ export const products = [
         name: "Jean Slim Fit",
         category: "Pantalones",
         price: 45999,
-        /*image: "img/productos/remeras/remera1.jpg",*/
         image: "img/productos/pantalones/jean1.jpg",
         rating: 5,
         reviews: 61,
-        shipping: false
+        shipping: false,
+
+        featured: true,
+        arrival: false
     },
 
     {
@@ -42,7 +50,67 @@ export const products = [
         image: "img/productos/camperas/campera1.jpg",
         rating: 5,
         reviews: 40,
-        shipping: true
-    }
+        shipping: true,
 
+        featured: true,
+        arrival: false
+    },
+
+
+    {
+    id: 5,
+    name: "Remera Vintage",
+    category: "Remeras",
+    price: 27999,
+    image: "img/productos/remeras/remera2.jpg",
+    rating: 5,
+    reviews: 34,
+    shipping: true,
+
+    featured: false,
+    arrival: true
+},
+
+{
+    id: 6,
+    name: "Jogger Cargo",
+    category: "Pantalones",
+    price: 49999,
+    image: "img/productos/pantalones/jogger1.jpg",
+    rating: 4,
+    reviews: 27,
+    shipping: true,
+
+    featured: false,
+    arrival: true
+},
+
+{
+    id: 7,
+    name: "Hoodie Beige",
+    category: "Buzos",
+    price: 55999,
+    image: "img/productos/buzos/buzo2.jpg",
+    rating: 5,
+    reviews: 18,
+    shipping: true,
+
+    featured: false,
+    arrival: true
+},
+
+{
+    id: 8,
+    name: "Zapatillas Urban",
+    category: "Calzado",
+    price: 79999,
+    image: "img/productos/calzado/zapatillas1.jpg",
+    rating: 5,
+    reviews: 52,
+    shipping: true,
+
+    featured: false,
+    arrival: true
+}
 ];
+

@@ -1,6 +1,5 @@
 import { products } from "./data/products.js";
 import { categories } from "./data/categories.js";
-import { newArrivals } from "./data/newArrivals.js";
 import { testimonials } from "./data/testimonials.js";
 
 import { createProductCard } from "./components/productCard.js";
@@ -8,13 +7,17 @@ import { createCategoryCard } from "./components/categoryCard.js";
 import { createArrivalCard } from "./components/arrivalCard.js";
 import { createTestimonialCard } from "./components/testimonialCard.js";
 
+import { addProduct } from "./services/cartService.js";
+
 // =========================
-// Productos Destacados
+// Productos destacados
 // =========================
 
 const featuredProducts = document.getElementById("featuredProducts");
 
-products.forEach(product => {
+const featuredList = products.filter(product => product.featured);
+
+featuredList.forEach(product => {
 
     featuredProducts.innerHTML += createProductCard(product);
 
@@ -33,14 +36,58 @@ categories.forEach(category => {
 });
 
 // =========================
-// Nuevos Ingresos
+// Nuevos ingresos
 // =========================
 
-const newArrivalsContainer = document.getElementById("newArrivals");
+const arrivalsContainer = document.getElementById("arrivalsContainer");
 
-newArrivals.forEach(product => {
+const arrivalsList = products.filter(product => product.arrival);
 
-    newArrivalsContainer.innerHTML += createArrivalCard(product);
+arrivalsList.forEach(product => {
+
+    arrivalsContainer.innerHTML += createArrivalCard(product);
+
+});
+
+// =========================
+// Carrito
+// =========================
+
+document.addEventListener("click", (event) => {
+
+    const button = event.target.closest(".add-to-cart");
+
+    if (!button) return;
+
+    const productId = Number(button.dataset.id);
+
+    const product = products.find(product => product.id === productId);
+
+    if (!product) return;
+
+    addProduct(product);
+
+    console.log(`${product.name} agregado al carrito`);
+
+});
+
+// =========================
+// Navbar
+// =========================
+
+window.addEventListener("scroll", () => {
+
+    const navbar = document.querySelector(".navbar");
+
+    if (window.scrollY > 40) {
+
+        navbar.classList.add("scrolled");
+
+    } else {
+
+        navbar.classList.remove("scrolled");
+
+    }
 
 });
 
@@ -53,25 +100,5 @@ const testimonialsContainer = document.getElementById("testimonialsContainer");
 testimonials.forEach(testimonial => {
 
     testimonialsContainer.innerHTML += createTestimonialCard(testimonial);
-
-});
-
-// =========================
-// Navbar
-// =========================
-
-window.addEventListener("scroll", () => {
-
-    const navbar = document.querySelector(".navbar");
-
-    if(window.scrollY > 40){
-
-        navbar.classList.add("scrolled");
-
-    }else{
-
-        navbar.classList.remove("scrolled");
-
-    }
 
 });
