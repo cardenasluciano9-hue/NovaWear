@@ -1,0 +1,111 @@
+/*======================================
+        RESUMEN DE COMPRA
+=======================================*/
+
+.cart-summary{
+
+    position: sticky;
+
+    bottom: 16px;
+
+    margin: 12px;
+
+    padding: 16px 18px;
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    border: 1px solid #ececec;
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,.08);
+
+}
+
+
+.summary-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:8px;
+
+    font-size:.92rem;
+
+    color:#6b7280;
+
+}
+
+.summary-row.total{
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+}
+
+.cart-summary hr{
+
+    margin:18px 0;
+
+}
+
+.cart-summary h5{
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+
+    margin-bottom: 14px;
+
+}
+
+.summary-total{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:14px;
+
+    padding-top:14px;
+
+    position:relative;
+
+}
+
+.summary-total::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:12px;
+
+    right:12px;
+
+    height:1px;
+
+    background:#ececec;
+
+}
+
+.cart-summary .btn-primary-custom{
+
+    margin-top:16px;
+
+    padding:10px 16px;
+
+    border-radius:12px;
+
+    font-size:.95rem;
+
+}

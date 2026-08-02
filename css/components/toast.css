@@ -1,0 +1,109 @@
+/*======================================
+        NOVAWEAR TOAST
+=======================================*/
+
+.novawear-toast{
+
+    width:360px;
+
+    background:#1f2937;
+
+    color:white;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+}
+
+.toast-content{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:18px;
+
+}
+
+.toast-icon{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#10b981;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:1.3rem;
+
+    flex-shrink:0;
+
+}
+
+.toast-text{
+
+    flex:1;
+
+}
+
+.toast-text strong{
+
+    display:block;
+
+    font-size:1rem;
+
+    margin-bottom:4px;
+
+}
+
+.toast-text p{
+
+    margin:0;
+
+    color:#d1d5db;
+
+    font-size:.9rem;
+
+}
+
+.toast-progress{
+
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        #10b981,
+        #3b82f6
+    );
+
+    animation:toastProgress 2.5s linear forwards;
+
+}
+
+@keyframes toastProgress{
+
+    from{
+
+        width:100%;
+
+    }
+
+    to{
+
+        width:0;
+
+    }
+
+}

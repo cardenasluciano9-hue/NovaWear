@@ -1,6 +1,8 @@
 import { products } from "./data/products.js";
 import { categories } from "./data/categories.js";
 import { testimonials } from "./data/testimonials.js";
+import { renderCart } from "./pages/cart.js";
+import { showToast } from "./services/toastService.js";
 
 import { createProductCard } from "./components/productCard.js";
 import { createCategoryCard } from "./components/categoryCard.js";
@@ -55,6 +57,7 @@ arrivalsList.forEach(product => {
 
 document.addEventListener("click", (event) => {
 
+
     const button = event.target.closest(".add-to-cart");
 
     if (!button) return;
@@ -66,6 +69,10 @@ document.addEventListener("click", (event) => {
     if (!product) return;
 
     addProduct(product);
+
+    renderCart();
+
+    showToast(`${product.name} agregado al carrito.`);
 
     console.log(`${product.name} agregado al carrito`);
 
@@ -102,3 +109,6 @@ testimonials.forEach(testimonial => {
     testimonialsContainer.innerHTML += createTestimonialCard(testimonial);
 
 });
+
+renderCart();
+

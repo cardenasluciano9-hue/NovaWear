@@ -1,0 +1,193 @@
+/*======================================
+            CARRITO
+=======================================*/
+
+.cart-item{
+
+    display:flex;
+
+    gap:15px;
+
+    padding:18px 0;
+
+    border-bottom:1px solid #ececec;
+
+    align-items:center;
+
+}
+
+.cart-item-image{
+
+    width:85px;
+
+    height:95px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+}
+
+.cart-item-info{
+
+    flex:1;
+
+}
+
+.cart-item-info h6{
+
+    margin:0;
+
+    font-weight:700;
+
+}
+
+.cart-item-info small{
+
+    color:gray;
+
+}
+
+.cart-item-info p{
+
+    margin:8px 0;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+.cart-quantity{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.quantity-btn{
+
+    width:32px;
+
+    height:32px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#f3f4f6;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.quantity-btn:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.remove-btn{
+
+    border:none;
+
+    background:none;
+
+    color:#ef4444;
+
+    font-size:1.2rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.remove-btn:hover{
+
+    transform:scale(1.15);
+
+}
+
+/*======================================
+        OFFCANVAS
+=======================================*/
+
+.offcanvas-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:0;
+
+    overflow:hidden;
+
+}
+
+/*======================================
+        LISTA PRODUCTOS
+=======================================*/
+
+.cart-items{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:20px;
+
+}
+
+/*======================================
+        RESUMEN
+=======================================*/
+
+.cart-summary{
+
+    position:sticky;
+
+    bottom:0;
+
+    background:white;
+
+    border-top:1px solid #e5e7eb;
+
+    padding:20px;
+
+    box-shadow:0 -8px 25px rgba(0,0,0,.06);
+
+}
+
+.summary-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:10px;
+
+}
+
+.summary-total{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+    margin-top:10px;
+
+}
