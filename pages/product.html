@@ -11,50 +11,35 @@
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
 
-    <!-- CSS propio -->
-    <link rel="stylesheet" href="css/variables.css">
+<!-- CSS Base -->
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
 
-    <link rel="stylesheet" href="css/reset.css">
+<!-- Layout -->
+<link rel="stylesheet" href="../css/base/layout.css">
 
-    <link rel="stylesheet" href="css/style.css">
+<!-- Componentes -->
+<link rel="stylesheet" href="../css/navbar.css">
 
-    <link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="../css/components/buttons.css">
+<link rel="stylesheet" href="../css/components/product-card.css">
+<link rel="stylesheet" href="../css/components/category-card.css">
+<link rel="stylesheet" href="../css/components/banner.css">
+<link rel="stylesheet" href="../css/components/arrival-card.css">
+<link rel="stylesheet" href="../css/components/testimonial-card.css">
+<link rel="stylesheet" href="../css/components/cart.css">
+<link rel="stylesheet" href="../css/components/cart-item.css">
+<link rel="stylesheet" href="../css/components/cart-summary.css">
+<link rel="stylesheet" href="../css/components/toast.css">
+<link rel="stylesheet" href="../css/components/product-detail.css">
 
-    <link rel="stylesheet" href="css/hero.css">
+<!-- Secciones -->
+<link rel="stylesheet" href="../css/sections/newsletter.css">
 
-    <link rel="stylesheet" href="css/categories.css">
-
-    <link rel="stylesheet" href="css/cards.css">
-
-    <link rel="stylesheet" href="css/footer.css">
-
-    <link rel="stylesheet" href="css/responsive.css">
-
-    <link rel="stylesheet" href="css/components/buttons.css">
-
-    <link rel="stylesheet" href="css/components/product-card.css">
-
-    <link rel="stylesheet" href="css/components/category-card.css">
-
-    <link rel="stylesheet" href="css/components/banner.css">
-
-    <link rel="stylesheet" href="css/components/arrival-card.css">
-
-    <link rel="stylesheet" href="css/components/testimonial-card.css">
-
-    <link rel="stylesheet" href="css/sections/newsletter.css">
-
-    <link rel="stylesheet" href="css/base/layout.css">
-
-    <link rel="stylesheet" href="css/components/footer.css">
-
-    <link rel="stylesheet" href="css/components/cart.css">
-
-    <link rel="stylesheet" href="css/components/cart-summary.css">
-
-    <link rel="stylesheet" href="css/components/toast.css">
-
-    <link rel="stylesheet" href="css/components/cart-item.css">
+<!-- Footer (solo uno) -->
+<link rel="stylesheet" href="../css/sections/footer.css">
 
 </head>
 <body>
@@ -167,82 +152,15 @@
 </nav>
 <!-- Fin del Navbar -->
 
-<!-- ================= HERO ================= -->
+<!-- ================= PRODUCT DETAIL ================= -->
 
-<section id="hero">
-    <div class="hero-overlay">
-
-    <div class="container">
-
-        <div class="hero-content">
-
-            <span class="hero-badge">
-                Nueva colección 2026
-            </span>
-
-            <h1>
-                Vestí tu mejor versión
-            </h1>
-
-            <p>
-                Moda urbana con diseño moderno, calidad y comodidad para cada momento.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#" class="btn-primary-custom">
-                    Comprar ahora
-                </a>
-
-                <a href="#" class="btn-secondary-custom">
-                    Ver colección
-                </a>
-
-            </div>
-
-            <div class="hero-info">
-
-                <div>
-                    <i class="bi bi-truck"></i>
-                    Envíos a todo el país
-                </div>
-
-                <div>
-                    <i class="bi bi-shield-check"></i>
-                    Compra segura
-                </div>
-
-                <div>
-                    <i class="bi bi-arrow-repeat"></i>
-                    Cambios hasta 30 días
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-</section>
-
-<!-- ================= CATEGORÍAS ================= -->
-
-    <section id="categories" class="section">
+<section class="product-detail-section py-5">
 
     <div class="container">
 
-        <div class="section-title text-center mb-5">
+        <div id="productDetail">
 
-            <h2>Explora nuestras categorías</h2>
-
-            <p>
-                Encontrá las últimas tendencias para cada estilo.
-            </p>
-
-        </div>
-
-        <div id="categoriesContainer" class="row g-4">
+            <!-- Se carga con JavaScript -->
 
         </div>
 
@@ -250,24 +168,30 @@
 
 </section>
 
-<!-- ================= PRODUCTOS DESTACADOS ================= -->
+<!-- ================= RELATED PRODUCTS ================= -->
 
-<section id="featured-products" class="section">
+<section id="related-products" class="section">
 
     <div class="container">
 
         <div class="section-title text-center mb-5">
 
-            <h2>Productos destacados</h2>
+            <h2>
+
+                También te puede interesar
+
+            </h2>
 
             <p>
-                Descubrí los productos favoritos de nuestros clientes.
+
+                Productos relacionados.
+
             </p>
 
         </div>
 
         <div
-            id="featuredProducts"
+            id="relatedProducts"
             class="row g-4 justify-content-center">
 
         </div>
@@ -276,220 +200,11 @@
 
 </section>
 
-<!-- ================= BANNER ================= -->
 
-<section id="banner">
 
-    <section class="promo-banner my-5">
 
-    <div class="container">
 
-        <div class="promo-content">
 
-            <span class="promo-tag">
-                NUEVA COLECCIÓN
-            </span>
-
-            <h2>
-                Hasta 40% OFF
-            </h2>
-
-            <p>
-                Descubrí las últimas tendencias y renová tu estilo con NovaWear.
-            </p>
-
-            <div class="promo-buttons">
-
-                <a href="#" class="btn-primary-custom">
-                    Comprar ahora
-                </a>
-
-                <a href="#" class="btn-outline-light-custom">
-                    Ver ofertas
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-</section>
-
-<!-- ================= NUEVOS INGRESOS ================= -->
-
-<section id="new-products">
-    <!--======================================
-        NUEVOS INGRESOS
-    =======================================-->
-
-    <section class="section">
-
-        <div class="container">
-
-            <div class="section-title text-center mb-5">
-
-                <span class="section-subtitle">
-
-                    Lo último en NovaWear
-
-                </span>
-
-                <h2>
-
-                    Nuevos ingresos
-
-                </h2>
-
-                <p>
-
-                    Descubrí las prendas que acaban de llegar a nuestra tienda.
-
-                </p>
-
-            </div>
-
-            <div class="row g-4" id="arrivalsContainer">
-
-            </div>
-
-        </div>
-
-    </section>
-</section>
-
-<!-- ================= TESTIMONIOS ================= -->
-
-<section id="testimonials" class="section">
-
-    <!--======================================
-        TESTIMONIOS
-=======================================-->
-
-<section class="testimonials py-5">
-
-    <div class="container">
-
-        <div class="section-title text-center mb-5">
-
-            <span class="section-subtitle">
-
-                Ellos ya confiaron en nosotros
-
-            </span>
-
-            <h2>
-
-                Lo que dicen nuestros clientes
-
-            </h2>
-
-            <p>
-
-                La satisfacción de nuestros clientes es nuestra mejor carta de presentación.
-
-            </p>
-
-        </div>
-
-        <div class="row g-4" id="testimonialsContainer">
-
-        </div>
-
-    </div>
-
-</section>
-
-</section>
-
-<!-- ================= NEWSLETTER ================= -->
-
-<section id="newsletter" class="section">
-<!--======================================
-        NEWSLETTER
-=======================================-->
-
-<section class="newsletter">
-
-    <div class="container">
-
-        <div class="newsletter-content">
-
-            <div class="newsletter-icon">
-
-                <i class="bi bi-envelope-paper-heart"></i>
-
-            </div>
-
-            <h2>
-
-                Unite a la comunidad NovaWear
-
-            </h2>
-
-            <p>
-
-                Recibí antes que nadie nuestras nuevas colecciones,
-                promociones exclusivas y descuentos especiales.
-
-            </p>
-
-            <form class="newsletter-form">
-
-                <input
-                    type="email"
-                    placeholder="Ingresá tu correo electrónico"
-                    required
-                >
-
-                <button class="btn-primary-custom">
-
-                    <i class="bi bi-send-fill"></i>
-
-                        Suscribirme
-
-                </button>
-
-
-
-            </form>
-
-            <div class="newsletter-benefits">
-
-                <span>
-
-                    <i class="bi bi-check-circle-fill"></i>
-
-                    Sin spam
-
-                </span>
-
-                <span>
-
-                    <i class="bi bi-check-circle-fill"></i>
-
-                    Promociones exclusivas
-
-                </span>
-
-                <span>
-
-                    <i class="bi bi-check-circle-fill"></i>
-
-                    Cancelá cuando quieras
-
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-</section>
 
 <!-- ================= FOOTER ================= -->
 
@@ -778,7 +493,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- JS propio -->
-    <script type="module" src="js/app.js"></script>
+    <script type="module" src="../js/product.js"></script>
 
 
 

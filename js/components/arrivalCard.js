@@ -1,4 +1,14 @@
+import { isFavorite } from "../services/favoriteService.js";
+
 export function createArrivalCard(product){
+
+    const imagePath = window.location.pathname.includes("/pages/")
+        ? `../${product.images[0]}`
+        : product.images[0];
+
+    const productLink = window.location.pathname.includes("/pages/")
+        ? `product.html?id=${product.id}`
+        : `pages/product.html?id=${product.id}`;
 
     return `
 
@@ -14,14 +24,24 @@ export function createArrivalCard(product){
 
                     </span>
 
-                    <img
-                        src="${product.image}"
-                        alt="${product.name}"
-                    >
+                    <a href="${productLink}">
 
-                    <button class="favorite-btn">
+                        <img
+                            src="${imagePath}"
+                            alt="${product.name}">
 
-                        <i class="bi bi-heart"></i>
+                    </a>
+
+                    <button
+                        class="favorite-btn"
+                        data-id="${product.id}"
+                        type="button">
+
+                        <i class="bi ${
+                            isFavorite(product.id)
+                                ? "bi-heart-fill"
+                                : "bi-heart"
+                        }"></i>
 
                     </button>
 
@@ -37,7 +57,13 @@ export function createArrivalCard(product){
 
                     <h3>
 
-                        ${product.name}
+                        <a
+                            href="${productLink}"
+                            class="text-decoration-none text-dark">
+
+                            ${product.name}
+
+                        </a>
 
                     </h3>
 

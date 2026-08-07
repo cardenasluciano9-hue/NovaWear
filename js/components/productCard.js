@@ -1,4 +1,14 @@
+import { isFavorite } from "../services/favoriteService.js";
+
 export function createProductCard(product) {
+
+    const imagePath = window.location.pathname.includes("/pages/")
+        ? `../${product.images[0]}`
+        : product.images[0];
+
+    const productLink = window.location.pathname.includes("/pages/")
+        ? `product.html?id=${product.id}`
+        : `pages/product.html?id=${product.id}`;
 
     return `
 
@@ -8,11 +18,24 @@ export function createProductCard(product) {
 
                 <div class="product-image">
 
-                    <img src="${product.image}" alt="${product.name}">
+                    <a href="${productLink}" class="text-decoration-none">
 
-                    <button class="favorite-btn">
+                        <img
+                            src="${imagePath}"
+                            alt="${product.name}">
 
-                        <i class="bi bi-heart"></i>
+                    </a>
+
+                    <button
+                        class="favorite-btn"
+                        data-id="${product.id}"
+                        type="button">
+
+                        <i class="bi ${
+                            isFavorite(product.id)
+                                ? "bi-heart-fill"
+                                : "bi-heart"
+                        }"></i>
 
                     </button>
 
@@ -21,11 +44,21 @@ export function createProductCard(product) {
                 <div class="product-info">
 
                     <span class="product-category">
+
                         ${product.category}
+
                     </span>
 
                     <h3>
-                        ${product.name}
+
+                        <a
+                            href="${productLink}"
+                            class="text-decoration-none text-dark">
+
+                            ${product.name}
+
+                        </a>
+
                     </h3>
 
                     <div class="product-rating">
@@ -46,15 +79,15 @@ export function createProductCard(product) {
 
                     </div>
 
-                    
                     <div class="product-shipping">
+
                         ${
                             product.shipping
-                            ? `<i class="bi bi-truck"></i> Envío gratis`
-                            : `<span class="text-muted"> Sin envío gratis</span>`
+                                ? `<i class="bi bi-truck"></i> Envío gratis`
+                                : `<span class="text-muted">Sin envío gratis</span>`
                         }
-                    </div>
 
+                    </div>
 
                     <button
                         class="btn-primary-custom w-100 add-to-cart"
@@ -75,32 +108,3 @@ export function createProductCard(product) {
     `;
 
 }
-export const categories = [
-    {
-        id: 1,
-        name: "Remeras",
-        icon: "bi bi-shirt",
-        image: "img/categories/remeras.jpg"
-    },
-
-    {
-        id: 2,
-        name: "Pantalones",
-        icon: "bi bi-bag",
-        image: "img/categories/pantalones.jpg"
-    },
-
-    {
-        id: 3,
-        name: "Camperas",
-        icon: "bi bi-cloud-snow",
-        image: "img/categories/camperas.jpg"
-    },
-
-    {
-        id: 4,
-        name: "Calzado",
-        icon: "bi bi-stars",
-        image: "img/categories/calzado.jpg"
-    }
-];

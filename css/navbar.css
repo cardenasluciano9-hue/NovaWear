@@ -2,24 +2,6 @@
             NAVBAR
 =======================================*/
 
-/*.navbar{
-
-    height: var(--navbar-height);
-
-    background: var(--navbar-bg);
-
-    backdrop-filter: blur(12px);
-
-    -webkit-backdrop-filter: blur(12px);
-
-    border-bottom:1px solid var(--navbar-border);
-
-    transition: var(--transition);
-
-    z-index:999;
-
-}*/
-
 .navbar{
 
     height: var(--navbar-height);
@@ -104,27 +86,69 @@
 
 }
 
+/*======================================
+        ICONOS NAVBAR
+=======================================*/
+
 .nav-icons{
 
     display:flex;
 
     align-items:center;
 
-    gap:20px;
+    gap:28px;
 
 }
 
-.nav-icons i{
+.favorite-btn-navbar,
+.cart-btn{
 
-    font-size:1.3rem;
+    position:relative;
+
+    border:none;
+
+    background:transparent;
+
+    padding:0;
 
     cursor:pointer;
 
-    transition:.3s;
+    color:#111827;
+
+    font-size:1.6rem;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.25s;
 
 }
 
-.nav-icons i:hover{
+.favorite-btn-navbar:hover,
+.cart-btn:hover{
+
+    color:var(--primary);
+
+    transform:translateY(-2px);
+
+}
+
+.nav-icons .bi-person-circle{
+
+    font-size:1.6rem;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    color:#111827;
+
+}
+
+.nav-icons .bi-person-circle:hover{
 
     color:var(--primary);
 
@@ -133,35 +157,43 @@
 }
 
 /*======================================
-        BOTÓN CARRITO
+        CONTADORES
 =======================================*/
 
-.cart-btn{
+.icon-counter{
 
-    background: transparent;
+    position:absolute;
 
-    border: none;
+    top:-8px;
 
-    padding: 0;
+    right:-12px;
 
-    cursor: pointer;
+    min-width:23px;
 
-    color: inherit;
+    height:23px;
 
-    font-size: 1.4rem;
+    border-radius:50%;
 
-    display: flex;
+    background:#ef4444;
 
-    align-items: center;
+    color:#fff;
 
-    justify-content: center;
+    display:flex;
 
-    transition: var(--transition);
+    align-items:center;
 
-}
+    justify-content:center;
 
-.cart-btn:hover{
+    font-size:.82rem;
 
-    color: var(--primary);
+    font-weight:700;
+
+    line-height:1;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.25);
+
+    pointer-events:none;
+
+    transition:.25s;
 
 }

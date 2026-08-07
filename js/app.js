@@ -11,6 +11,11 @@ import { createTestimonialCard } from "./components/testimonialCard.js";
 
 import { addProduct } from "./services/cartService.js";
 
+import {
+    toggleFavorite,
+    getTotalFavorites
+} from "./services/favoriteService.js";
+
 // =========================
 // Productos destacados
 // =========================
@@ -56,6 +61,52 @@ arrivalsList.forEach(product => {
 // =========================
 
 document.addEventListener("click", (event) => {
+
+    // =========================
+// Favoritos
+// =========================
+
+const favoriteButton = event.target.closest(".favorite-btn");
+
+if (favoriteButton) {
+
+    // Evita abrir la página del producto
+    event.preventDefault();
+    event.stopPropagation();
+
+    const id = Number(favoriteButton.dataset.id);
+
+    const product = products.find(product => product.id === id);
+
+    console.log(product);
+
+    if (!product) return;
+
+    toggleFavorite(product);
+
+    const icon = favoriteButton.querySelector("i");
+
+    if (icon.classList.contains("bi-heart")) {
+
+        icon.classList.remove("bi-heart");
+        icon.classList.add("bi-heart-fill");
+
+        showToast("Producto agregado a favoritos ❤️");
+
+    } else {
+
+        icon.classList.remove("bi-heart-fill");
+        icon.classList.add("bi-heart");
+
+        showToast("Producto eliminado de favoritos");
+
+    }
+
+    updateFavoriteCounter();
+
+    return;
+
+}
 
 
     const button = event.target.closest(".add-to-cart");
@@ -112,3 +163,20 @@ testimonials.forEach(testimonial => {
 
 renderCart();
 
+function updateFavoriteCounter(){
+
+    const favoriteCounter =
+        document.getElementById("favoriteCounter");
+
+    if(!favoriteCounter) return;
+
+    const total = getTotalFavorites();
+
+    favoriteCounter.textContent = total;
+
+    favoriteCounter.style.display =
+        total > 0 ? "block" : "none";
+
+}
+
+updateFavoriteCounter();

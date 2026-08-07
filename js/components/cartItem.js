@@ -2,6 +2,10 @@ export function createCartItem(product) {
 
     const subtotal = product.price * product.quantity;
 
+    const imagePath = window.location.pathname.includes("/pages/")
+        ? `../${product.images[0]}`
+        : product.images[0];
+
     return `
 
         <div class="cart-item">
@@ -9,8 +13,9 @@ export function createCartItem(product) {
             <div class="cart-item-image">
 
                 <img
-                    src="${product.image}"
+                    src="${imagePath}"
                     alt="${product.name}">
+
             </div>
 
             <div class="cart-item-info">
@@ -61,8 +66,9 @@ export function createCartItem(product) {
 
                 </div>
 
-                ${product.shipping
-                    ? `
+                ${
+                    product.shipping
+                        ? `
                         <div class="cart-shipping">
 
                             <i class="bi bi-truck"></i>
@@ -70,69 +76,69 @@ export function createCartItem(product) {
                             Envío gratis
 
                         </div>
-                    `
-                    : ""
+                        `
+                        : ""
                 }
 
-        <div class="cart-bottom">
+                <div class="cart-bottom">
 
-            <div class="cart-quantity-section">
+                    <div class="cart-quantity-section">
 
-                <div class="cart-bottom-header">
+                        <div class="cart-bottom-header">
 
-                    <small class="cart-label">
+                            <small class="cart-label">
 
-                        Cantidad
+                                Cantidad
 
-                    </small>
+                            </small>
 
-                    <small class="cart-label">
+                            <small class="cart-label">
 
-                        Subtotal
+                                Subtotal
 
-                    </small>
+                            </small>
 
-                </div>
+                        </div>
 
-                <div class="cart-bottom-content">
+                        <div class="cart-bottom-content">
 
-                    <div class="cart-quantity">
+                            <div class="cart-quantity">
 
-                        <button
-                            class="quantity-btn decrease"
-                            data-id="${product.id}">
+                                <button
+                                    class="quantity-btn decrease"
+                                    data-id="${product.id}">
 
-                            <i class="bi bi-dash"></i>
+                                    <i class="bi bi-dash"></i>
 
-                        </button>
+                                </button>
 
-                        <span>
+                                <span>
 
-                            ${product.quantity}
+                                    ${product.quantity}
 
-                        </span>
+                                </span>
 
-                        <button
-                            class="quantity-btn increase"
-                            data-id="${product.id}">
+                                <button
+                                    class="quantity-btn increase"
+                                    data-id="${product.id}">
 
-                            <i class="bi bi-plus"></i>
+                                    <i class="bi bi-plus"></i>
 
-                        </button>
+                                </button>
+
+                            </div>
+
+                            <strong class="cart-subtotal-price">
+
+                                $${subtotal.toLocaleString("es-AR")}
+
+                            </strong>
+
+                        </div>
 
                     </div>
 
-                    <strong class="cart-subtotal-price">
-
-                        $${subtotal.toLocaleString("es-AR")}
-
-                    </strong>
-
                 </div>
-
-            </div>
-
-        </div>
 
             </div>
 

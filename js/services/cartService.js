@@ -30,22 +30,23 @@ function saveCart(cart) {
 // Agregar producto
 // ======================================
 
-export function addProduct(product) {
+export function addProduct(product, quantity = 1){
 
     const cart = getCart();
 
     const existingProduct = cart.find(item => item.id === product.id);
 
-    if (existingProduct) {
+    if(existingProduct){
 
-        existingProduct.quantity++;
+        existingProduct.quantity += quantity;
 
-    } else {
+    }else{
 
         cart.push({
 
             ...product,
-            quantity: 1
+
+            quantity
 
         });
 
