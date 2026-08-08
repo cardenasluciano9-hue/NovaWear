@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaWear - Producto</title>
+    <title>NovaWear - Favoritos</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -50,8 +50,8 @@
 <link rel="stylesheet" href="../css/components/cart-item.css">
 <link rel="stylesheet" href="../css/components/toast.css">
 
-<!-- Página producto -->
-<link rel="stylesheet" href="../css/product-detail.css">
+<!-- Página favoritos -->
+<link rel="stylesheet" href="../css/favorites.css">
 
 <!-- Secciones -->
 <link rel="stylesheet" href="../css/sections/newsletter.css">
@@ -185,60 +185,44 @@
 </nav>
 <!-- Fin del Navbar -->
 
-<!-- ================= PRODUCT DETAIL ================= -->
 
-<section class="product-detail-section py-5">
+<!-- ================= FAVORITO ================= -->
 
-    <div class="container">
-
-        <div id="productDetail">
-
-            <!-- Se carga con JavaScript -->
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= RELATED PRODUCTS ================= -->
-
-<section id="related-products" class="section">
+<main class="favorites-page">
 
     <div class="container">
 
-        <div class="section-title text-center mb-5">
+        <div class="favorites-header">
 
-            <h2>
+            <h1>
 
-                También te puede interesar
+                <i class="bi bi-heart-fill"></i>
 
-            </h2>
+                Mis Favoritos
+
+            </h1>
 
             <p>
 
-                Productos relacionados.
+                Todos los productos que guardaste para ver más tarde.
 
             </p>
 
         </div>
 
         <div
-            id="relatedProducts"
-            class="row g-4 justify-content-center">
+            id="favoritesContainer"
+            class="row g-4">
 
         </div>
 
     </div>
 
-</section>
+</main>
 
 <!-- ================= FOOTER ================= -->
 
 <footer class="section">
-<!--======================================
-                FOOTER
-=======================================-->
 
 <footer class="footer">
 
@@ -520,7 +504,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- JS propio -->
-    <script type="module" src="../js/product.js"></script>
+    <script type="module" src="../js/favorites.js"></script>
     <script type="module" src="../js/search.js"></script>
 
 

@@ -111,12 +111,27 @@
             </ul>
 
             <!-- Buscador -->
-            <form class="d-none d-lg-flex me-4">
+
+            <form
+                class="d-none d-lg-flex me-4 search-form"
+                id="searchForm">
 
                 <input
+                    id="searchInput"
                     class="form-control"
                     type="search"
-                    placeholder="Buscar productos...">
+                    placeholder="Buscar productos..."
+                    autocomplete="off">
+
+                <button
+                    type="button"
+                    id="clearSearch"
+                    class="clear-search"
+                    aria-label="Limpiar búsqueda">
+
+                    <i class="bi bi-x"></i>
+
+                </button>
 
             </form>
 

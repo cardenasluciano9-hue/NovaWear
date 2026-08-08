@@ -3,6 +3,7 @@ import { categories } from "./data/categories.js";
 import { testimonials } from "./data/testimonials.js";
 import { renderCart } from "./pages/cart.js";
 import { showToast } from "./services/toastService.js";
+import "./search.js";
 
 import { createProductCard } from "./components/productCard.js";
 import { createCategoryCard } from "./components/categoryCard.js";

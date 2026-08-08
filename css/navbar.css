@@ -197,3 +197,247 @@
     transition:.25s;
 
 }
+
+/*======================================
+        BUSCADOR
+=======================================*/
+
+.search-form{
+
+    position:relative;
+
+}
+
+.search-results{
+
+    position:absolute;
+
+    top:70px;
+
+    right:150px;
+
+    width:360px;
+
+    background:white;
+
+    border-radius:14px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    overflow:hidden;
+
+    z-index:2000;
+
+    display:none;
+
+}
+
+/*======================================
+        RESULTADO
+=======================================*/
+
+.search-result-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px;
+
+    text-decoration:none;
+
+    color:var(--dark);
+
+    border-bottom:1px solid #eee;
+
+    transition:.25s;
+
+}
+
+.search-result-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.search-result-item:hover{
+
+    background:#f8f8f8;
+
+}
+
+/*======================================
+        IMAGEN
+=======================================*/
+
+.search-result-image{
+
+    width:60px;
+
+    height:60px;
+
+    flex-shrink:0;
+
+    overflow:hidden;
+
+    border-radius:10px;
+
+}
+
+.search-result-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/*======================================
+        INFORMACIÓN
+=======================================*/
+
+.search-result-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:3px;
+
+    min-width:0;
+
+}
+
+.search-result-info strong{
+
+    font-size:.95rem;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+.search-result-info span{
+
+    font-size:.8rem;
+
+    color:#6b7280;
+
+}
+
+.search-result-info b{
+
+    font-size:.9rem;
+
+    color:var(--primary);
+
+}
+
+/*======================================
+        SIN RESULTADOS
+=======================================*/
+
+.search-no-results{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:20px;
+
+    color:#6b7280;
+
+    font-size:.9rem;
+
+}
+
+.search-no-results i{
+
+    font-size:1.1rem;
+
+}
+
+/*======================================
+        LIMPIAR BUSCADOR
+=======================================*/
+
+.search-form{
+
+    position:relative;
+
+}
+
+.clear-search{
+
+    position:absolute;
+
+    right:10px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:28px;
+
+    height:28px;
+
+    border:none;
+
+    background:transparent;
+
+    color:#6b7280;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:1.2rem;
+
+    transition:.25s;
+
+}
+
+.clear-search:hover{
+
+    background:#f1f1f1;
+
+    color:var(--primary);
+
+}
+
+.search-form input{
+
+    padding-right:40px;
+
+}
+
+/*======================================
+        OCULTAR X NATIVA DEL SEARCH
+=======================================*/
+
+.search-form input[type="search"]::-webkit-search-cancel-button{
+
+    -webkit-appearance:none;
+
+    appearance:none;
+
+    display:none;
+
+}
